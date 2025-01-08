@@ -17,11 +17,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'FlutterChat',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         primarySwatch: Colors.purple,
         useMaterial3: true,
-        // debugShowCheckedModeBanner: false,
         buttonTheme: ButtonThemeData(
           buttonColor: Colors.purple,
           textTheme: ButtonTextTheme.primary,
