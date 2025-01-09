@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        secondaryHeaderColor: Colors.deepPurple,
         primarySwatch: Colors.purple,
         useMaterial3: true,
         primaryIconTheme: const IconThemeData(color: Colors.purple),
