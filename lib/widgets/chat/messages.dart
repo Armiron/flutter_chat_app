@@ -40,6 +40,7 @@ class Messages extends StatelessWidget {
                   ),
                   child: MessageBubble(
                     documents![index]['text'],
+                    documents[index]['username'],
                     documents[index]['userId'] == user!.uid,
                     key: ValueKey(documents[index].id),
                   ),
