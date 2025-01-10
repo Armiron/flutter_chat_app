@@ -1,4 +1,6 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_chat_app/widgets/pickers/user_image_picker.dart';
 
 class AuthForm extends StatefulWidget {
   const AuthForm(this.submitFn, this.isLoading, {super.key});
@@ -50,6 +52,7 @@ class _AuthFormState extends State<AuthForm> {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
+                  UserImagePicker(),
                   TextFormField(
                     validator: (value) {
                       if (value!.isEmpty || !value.contains('@')) {
