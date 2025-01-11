@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_chat_app/widgets/auth/auth_form.dart';
@@ -19,6 +22,7 @@ class _AuthScreenState extends State<AuthScreen> {
     String email,
     String password,
     String username,
+    File? image,
     bool isLogin,
     BuildContext context,
   ) async {
@@ -37,6 +41,13 @@ class _AuthScreenState extends State<AuthScreen> {
           email: email,
           password: password,
         );
+
+        // firestore wants a paid plan to store images so imma skip this
+        // since i will not use firebase ever i have my own backend
+        // final ref = FirebaseStorage.instance
+        //     .ref()
+        //     .child('user_images')
+        //     .child(authResult.user!.uid + '.jpg');
 
         await FirebaseFirestore.instance
             .collection('users')
